@@ -22,13 +22,12 @@ with open (original_file_name + original_file_ext, 'r') as read_file:
         # Then reads characters and concatenates as a string until reading a closing parenthesis
         # The string is then written on a line in the new file
         for line in read_file:
-        # Set line to output of readline
-            line = read_file.readline()
+            print(line)
          
-         # Initialize counter index to 0, save flag to 0
+            # Initialize counter index to 0, save flag to 0
             i = 0
             save = 0
-         # Create Empty String
+            # Create Empty String
             temp_string = ""
             for i in range (0, len(line)):
                 if line[i] == '(':
@@ -39,6 +38,7 @@ with open (original_file_name + original_file_ext, 'r') as read_file:
                     temp_string+=line[i]
               
             # Write word
+            print(temp_string + '\n')
             write_file.write(temp_string+'\n')
          
 
